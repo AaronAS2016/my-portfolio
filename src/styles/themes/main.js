@@ -1,16 +1,18 @@
 export const themes = {
     dark:{
         colors: {
-            primary: "#ffbd00",
-            secundary: "#2E2C2D",
-            accent: "#FE4A49"
+            primary: "#ffe742",
+            secundary: "#171321",
+            accent: "#FE4A49",
+            text: "#fffeff"
         }
     },
     light:{
         colors:{
-            primary: "#ffbd00",
-            secundary: "#FFFEFF",
-            accent: "#FE4A49"
+            primary: "#ffe742",
+            secundary: "#fffeff",
+            accent: "#FE4A49",
+            text: "#171321"
         }
     }
 }
