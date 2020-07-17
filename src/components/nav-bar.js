@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const LogoName = styled.a`
     line-height:1.45;
-    color: ${({theme}) => theme.dark.colors.text};
+    color: ${({theme}) => theme.text};
     cursor:pointer;
 `
 
@@ -15,7 +15,7 @@ const NavWrapper = styled.div`
     padding: 1em 2em;
 
     &:after{
-        background-image: linear-gradient(90deg, ${({theme}) => theme.dark.colors.secundary}, 0 , ${({theme}) => theme.dark.colors.primary}, 50%,${({theme}) => theme.dark.colors.accent});
+        background-image: ${({theme}) => theme.gradient};
         content: "";
         display: block;
         height: 4px;

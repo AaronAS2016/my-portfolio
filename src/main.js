@@ -1,15 +1,24 @@
 import React from "react";
 import { Router } from "@reach/router";
 import { ThemeProvider } from 'styled-components'
-import { themes } from '@as/styles'
+import { lightTheme, darkTheme } from '@as/styles'
 import { Layout } from "./layout";
 import Home from "./pages/Home";
+import { useDarkMode } from "./utils/useDarkMode";
+
 
 export const Main = () => {
+  const [theme, toggleTheme, componentMounted] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
+  if (!componentMounted) {
+    return <div />
+  };
+
   return (
     <>
-      <ThemeProvider theme={themes}>
-        <Layout>
+      <ThemeProvider theme={themeMode}>
+        <Layout toggleTheme={toggleTheme}>
           <Router>
             <Home path="/" />
           </Router>

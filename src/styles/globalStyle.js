@@ -1,21 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  @media (prefers-color-scheme: dark) { 
-    body {
-        background: ${({ theme }) => theme.dark.colors.secundary};
-    }
-  }
-  
-  @media (prefers-color-scheme: light) {
-    background: ${({ theme }) => theme.light.colors.secundary};
-  }
-
   body{
     margin:0;
     padding:0;
     font-family: 'Oswald', sans-serif;
-    color: ${({theme}) => theme.dark.colors.primary};
+    background: ${({theme}) => theme.body};
   }
 
   a{
