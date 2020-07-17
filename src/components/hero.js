@@ -21,6 +21,8 @@ const TextWrapper = styled.div`
   display:flex;
   justify-content:center;
   flex-direction:column;
+  text-align:center;
+  text-transform:uppercase;
 `;
 
 
