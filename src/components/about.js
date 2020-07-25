@@ -76,22 +76,17 @@ const BioText = styled.p`
 
 
 const bioText = {
-    short: "",
-    shorter: "",
-    shortest: "",
-    long:"",
-    longer:" ",
-    longest:" "
+    short: "My bio short",
+    shorter: "My bio shorter",
+    shortest: "My bio shortest",
+    long:"My bio long",
+    longer:"My bio longer",
+    longest:"My bio longest"
 }    
 
 export const About = () => {
 
-    const [actualText, setText] = useState("");
-
-    useEffect(() => {
-        console.log(actualText)
-    }, [actualText])
-
+    const [actualText, setText] = useState("short");
 
     return (
         <Wrapper>
@@ -112,7 +107,7 @@ export const About = () => {
 
 
                     </BioTextForm>
-                    <BioText>{ actualText }</BioText>
+                    <BioText>{ bioText[actualText] }</BioText>
                     <SocialMediaWrapper></SocialMediaWrapper>
 
                 </BioTextWrapper>
