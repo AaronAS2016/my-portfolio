@@ -45,7 +45,7 @@ ${props =>
 export const ButtonForm = ({ id, text, isSelected, name, isVisible, handleClick }) => {
     return(
         <Wrapper>
-            <Input type="radio" name={name} id={id} value={name} onClick={() => handleClick(id)}/>
+            <Input type="radio" name={name} id={id} value={name} onClick={() => handleClick(id)}  checked={isSelected} />
             
             <Label htmlFor={id} >
                 <Span isvisible={isVisible}>

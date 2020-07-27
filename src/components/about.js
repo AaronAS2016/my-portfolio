@@ -98,7 +98,7 @@ export const About = () => {
                             <BioModule>
                                 <ButtonForm handleClick={ setText }  isVisible={"true"} id="shortest" isSelected={false} text={"shortest"} name="lenght"/>
                                 <ButtonForm handleClick={ setText }  isVisible={"false"} id="shorter" isSelected={false} text={"shorter"} name="lenght"/>
-                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="short" isSelected={false} text={"short"} name="lenght"/>
+                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="short" isSelected={true} text={"short"} name="lenght"/>
                                 <ButtonForm handleClick={ setText }  isVisible={"false"} id="long" isSelected={false} text={"long"} name="lenght"/>
                                 <ButtonForm handleClick={ setText }  isVisible={"false"} id="longer" isSelected={false} text={"longer"} name="lenght"/>
                                 <ButtonForm handleClick={ setText }  isVisible={"true"} id="longest" isSelected={false} text={"longest"} name="lenght"/>
