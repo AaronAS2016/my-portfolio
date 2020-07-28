@@ -96,12 +96,12 @@ export const About = () => {
                         <FormField>
                             <Legend>Adjust bio lenght:</Legend>
                             <BioModule>
-                                <ButtonForm handleClick={ setText }  isVisible={"true"} id="shortest" isSelected={false} text={"shortest"} name="lenght"/>
-                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="shorter" isSelected={false} text={"shorter"} name="lenght"/>
-                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="short" isSelected={true} text={"short"} name="lenght"/>
-                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="long" isSelected={false} text={"long"} name="lenght"/>
-                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="longer" isSelected={false} text={"longer"} name="lenght"/>
-                                <ButtonForm handleClick={ setText }  isVisible={"true"} id="longest" isSelected={false} text={"longest"} name="lenght"/>
+                                <ButtonForm handleClick={ setText }  isVisible={"true"} id="shortest" isSelected={actualText === "shortest"} text={"shortest"} name="lenght"/>
+                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="shorter" isSelected={actualText === "shorter"} text={"shorter"} name="lenght"/>
+                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="short" isSelected={actualText === "short"} text={"short"} name="lenght"/>
+                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="long" isSelected={actualText === "long"} text={"long"} name="lenght"/>
+                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="longer" isSelected={actualText === "longer"} text={"longer"} name="lenght"/>
+                                <ButtonForm handleClick={ setText }  isVisible={"true"} id="longest" isSelected={actualText === "longest"} text={"longest"} name="lenght"/>
                             </BioModule>
                         </FormField>
 
