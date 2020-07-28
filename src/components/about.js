@@ -84,6 +84,15 @@ const bioText = {
     longest:"My bio longest"
 }    
 
+const bioButtons = [
+    {isTextVisible: "true", id: "shortest", name:"lenght"},
+    {isTextVisible: "false", id: "shorter", name:"lenght"},
+    {isTextVisible: "false", id: "short", name:"lenght"},
+    {isTextVisible: "false", id: "long", name:"lenght"},
+    {isTextVisible: "false", id: "longer", name:"lenght"},
+    {isTextVisible: "true", id: "longest", name:"lenght"}
+]
+
 export const About = () => {
 
     const [actualText, setText] = useState("short");
@@ -96,12 +105,19 @@ export const About = () => {
                         <FormField>
                             <Legend>Adjust bio lenght:</Legend>
                             <BioModule>
-                                <ButtonForm handleClick={ setText }  isVisible={"true"} id="shortest" isSelected={actualText === "shortest"} text={"shortest"} name="lenght"/>
-                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="shorter" isSelected={actualText === "shorter"} text={"shorter"} name="lenght"/>
-                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="short" isSelected={actualText === "short"} text={"short"} name="lenght"/>
-                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="long" isSelected={actualText === "long"} text={"long"} name="lenght"/>
-                                <ButtonForm handleClick={ setText }  isVisible={"false"} id="longer" isSelected={actualText === "longer"} text={"longer"} name="lenght"/>
-                                <ButtonForm handleClick={ setText }  isVisible={"true"} id="longest" isSelected={actualText === "longest"} text={"longest"} name="lenght"/>
+                                {
+                                    bioButtons.map(({isTextVisible, id, name}) => (
+                                        <ButtonForm 
+                                            key={id} 
+                                            handleClick={ setText }  
+                                            isTextVisible={isTextVisible} 
+                                            id={id} 
+                                            isSelected={actualText === id} 
+                                            text={id} 
+                                            name={name}/>
+                                    ))
+
+                                }
                             </BioModule>
                         </FormField>
 

@@ -84,7 +84,7 @@ ${props =>
 
 `
 
-export const ButtonForm = ({ id, text, isSelected, name, isVisible, handleClick }) => {
+export const ButtonForm = ({ id, text, isSelected, name, isTextVisible, handleClick }) => {
 
     const [isChecked, setChecked] = useState(isSelected);
 
@@ -104,7 +104,7 @@ export const ButtonForm = ({ id, text, isSelected, name, isVisible, handleClick 
             />
             
             <Label htmlFor={id} >
-                <Span isvisible={isVisible}>
+                <Span isvisible={isTextVisible}>
                     {text}
                 </Span>
             </Label>
