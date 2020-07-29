@@ -1,6 +1,7 @@
 import React, {  useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ButtonForm } from './button-form';
+import { bioText } from '../config/textBio';
 
 
 const Wrapper = styled.div`
@@ -22,17 +23,34 @@ const SectionWrapper = styled.section`
 
 
 const BioTextWrapper = styled.div`
-
+    font-family: 'Merriweather', serif;
 `
 
 const BioTextForm = styled.form`
     margin: 1em auto 3em;
-    max-widht:90vw;
+    max-width:90vw;
     width:300px;
-`
-
-const BioText = styled.p`
+    `
+    
+    const BioText = styled.div`
+    display:flex;
+    justify-content:flex-start;
+    text-align:left;
     color: ${({theme}) => theme.text}; 
+    max-width:90vw;
+    font-size:1.2em;
+
+
+
+    .bold{
+        font-weight:bold;
+    }
+
+    a {
+        text-decoration: underline;
+        color: ${({theme}) => theme.main}
+    }
+
     `
     
     
@@ -75,14 +93,6 @@ const BioText = styled.p`
     
 
 
-const bioText = {
-    short: "My bio short",
-    shorter: "My bio shorter",
-    shortest: "My bio shortest",
-    long:"My bio long",
-    longer:"My bio longer",
-    longest:"My bio longest"
-}    
 
 const bioButtons = [
     {isTextVisible: "true", id: "shortest", name:"lenght"},
@@ -96,6 +106,9 @@ const bioButtons = [
 export const About = () => {
 
     const [actualText, setText] = useState("short");
+
+  
+    
 
     return (
         <Wrapper>
