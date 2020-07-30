@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ButtonForm } from "./button-form";
 import { bioText } from "../config/textBio";
 import { bioButtons } from "../config/bioButtons";
-import {ReactComponent as LinkedinLogo} from '../assets/linkedin.svg';
+import  LinkedinLogo from '../assets/linkedin.svg';
 
 
 const BioTextWrapper = styled.div`
