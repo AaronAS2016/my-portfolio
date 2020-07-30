@@ -13,6 +13,7 @@ const NavWrapper = styled.div`
     top:0;
     z-index:10;
     padding: 1em 2em;
+    background-color: ${({theme}) => theme.body};
 
     &:after{
         background-image: ${({theme}) => theme.gradient};
