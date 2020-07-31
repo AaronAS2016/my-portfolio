@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ButtonForm } from "./button-form";
 import { bioText } from "../config/textBio";
 import { bioButtons } from "../config/bioButtons";
-import  LinkedinLogo from '../assets/linkedin.svg';
+import { SocialMedia } from "./social-media";
 
 
 const BioTextWrapper = styled.div`
@@ -11,7 +11,7 @@ const BioTextWrapper = styled.div`
 `;
 
 const BioTextForm = styled.form`
-  margin: 1em auto 3em;
+  margin: 1em auto;
   max-width: 90vw;
   width: 300px;
 `;
@@ -20,9 +20,10 @@ const Text = styled.div`
   display: flex;
   justify-content: flex-start;
   text-align: left;
+  line-height:1.7;
   color: ${({ theme }) => theme.text};
   max-width: 90vw;
-  font-size: 1.2em;
+  
 
   .bold {
     font-weight: bold;
@@ -34,7 +35,6 @@ const Text = styled.div`
   }
 `;
 
-const SocialMediaWrapper = styled.div``;
 
 /**
  * Form
@@ -85,9 +85,7 @@ export const BioText = () => {
         </FormField>
       </BioTextForm>
       <Text>{bioText[actualText]}</Text>
-      <SocialMediaWrapper>
-          <LinkedinLogo></LinkedinLogo>
-      </SocialMediaWrapper>
+      <SocialMedia></SocialMedia>
     </BioTextWrapper>
   );
 };
