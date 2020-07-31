@@ -13,3 +13,9 @@ export const lightTheme = {
     toggleBorder: '#FE4A49',
     gradient: 'linear-gradient(90deg, #171321, 0 , #ffe742, 50%, #fe4a49)',
   }
+
+
+  export const mainTheme = {
+    ffMain : 'Ruda',
+    ffTexts: 'Roboto Slab'
+  }

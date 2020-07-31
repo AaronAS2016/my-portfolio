@@ -12,7 +12,8 @@ const Title = styled.h3`
     text-align:center;
     font-weight:bold;
     text-transform:uppercase;
-    text-separation:1.2;
+    letter-spacing: 1.2px;
+    margin: 1em 0 .3em;
 `
 
 const SocialMediaIconsWrapper = styled.div`
@@ -27,13 +28,15 @@ const IconWrapper = styled.a`
     transition: all .2s linear;
     transition-delay: .15s;
 
-    margin:1em;
+    margin:.3em 1em;
     box-sizing:border-box;
 
     svg{
         cursor:pointer;
         fill: #fff;
-        width:100%;
+        
+        width:40px;
+        
     }
 
 `

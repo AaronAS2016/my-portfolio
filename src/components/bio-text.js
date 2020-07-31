@@ -7,7 +7,7 @@ import { SocialMedia } from "./social-media";
 
 
 const BioTextWrapper = styled.div`
-  font-family: "Merriweather", serif;
+  
 `;
 
 const BioTextForm = styled.form`
@@ -23,7 +23,7 @@ const Text = styled.div`
   line-height:1.7;
   color: ${({ theme }) => theme.text};
   max-width: 90vw;
-  
+  font-family: ${({theme}) => theme.ffTexts};
 
   .bold {
     font-weight: bold;
